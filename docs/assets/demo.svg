@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="496" viewBox="0 0 760 496" font-family="Menlo, Consolas, monospace" font-size="14" xml:space="preserve">
+  <rect width="760" height="496" rx="10" fill="#101418"/>
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="380" y="27" fill="#8b949e" text-anchor="middle" font-size="12">ciblame — where did the CI minutes go?</text>
+  <g fill="#c9d1d9">
+    <text x="24" y="62"><tspan fill="#7ee787">$</tspan> ciblame diff base.zip head.zip</text>
+    <text x="24" y="92"><tspan fill="#79c0ff">ciblame diff</tspan> — base.zip → head.zip</text>
+    <text x="24" y="114">job time    3m00s → 7m03s    <tspan fill="#f778ba">+4m02s (+134.4%)</tspan></text>
+    <text x="24" y="136">wall        2m10s → 6m11s    <tspan fill="#f778ba">+4m01s</tspan></text>
+    <text x="24" y="170" fill="#d2a8ff">job build  +4m01s  (2m10s → 6m11s)</text>
+    <text x="24" y="192">  ~ Run unit tests                1m02s → 4m26s        <tspan fill="#f778ba">+3m24s</tspan>  <tspan fill="#f778ba">████████████████</tspan></text>
+    <text x="24" y="214">  ~ Restore module cache           8.0s → 31.8s        <tspan fill="#f778ba">+23.8s</tspan>  <tspan fill="#f778ba">█</tspan></text>
+    <text x="24" y="236">  <tspan fill="#7ee787">+ Generate coverage report          — → 12.5s</tspan>        <tspan fill="#f778ba">+12.5s</tspan>  <tspan fill="#f778ba">█</tspan></text>
+    <text x="24" y="258" fill="#8b949e">  · 6 steps within ±2.0s (net +0.0s)</text>
+    <text x="24" y="292" fill="#d2a8ff">job lint (ubuntu-latest)  +1.8s  (50.2s → 52.0s)</text>
+    <text x="24" y="314" fill="#8b949e">  · 3 steps within ±2.0s (net +1.8s)</text>
+    <text x="24" y="356"><tspan fill="#7ee787">$</tspan> ciblame report --job build head.zip</text>
+    <text x="24" y="382" fill="#d2a8ff">job build · 6m11s · 9 steps · started 10:00:00Z · ubuntu-24.04</text>
+    <text x="24" y="404" fill="#8b949e">   #  step                          start       dur</text>
+    <text x="24" y="426">   4  Restore module cache         +12.3s     31.8s  <tspan fill="#79c0ff">███</tspan><tspan fill="#30363d">░░░░░░░░░░░░░░░░░░░░░░░░░</tspan></text>
+    <text x="24" y="448">   5  Build                        +44.3s     38.0s  <tspan fill="#30363d">░░░</tspan><tspan fill="#79c0ff">███</tspan><tspan fill="#30363d">░░░░░░░░░░░░░░░░░░░░░░</tspan></text>
+    <text x="24" y="470">   6  Run unit tests               +1m23s     4m26s  <tspan fill="#30363d">░░░░░░</tspan><tspan fill="#f778ba">████████████████████</tspan><tspan fill="#30363d">░░</tspan></text>
+  </g>
+</svg>
